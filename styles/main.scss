@@ -36,6 +36,7 @@
          top: 0;
          left: 0;
          z-index: -1;
+         width: 100vw;
 
          @include mobile {
              top: 10px;
@@ -43,11 +44,7 @@
      }
 
      #heading {
-         color: #fff;
-
-         @include mobile {
-             color: black;
-         }
+         color: #262626;
      }
 
      img {
@@ -101,11 +98,12 @@
  #about,
  #speaker {
      h1 {
-         padding-left: 10px;
+         padding-left: 20px;
          color: gray;
          font-size: 50px;
 
          @include mobile {
+             padding-left: 10px;
              font-size: 40px;
          }
      }
@@ -170,11 +168,12 @@
 
  #about {
      img {
-         width: 40%;
+         width: 35%;
          display: inline-block;
          position: absolute;
          right: 10px;
          top: 120%;
+         z-index: -1;
 
          @include mobile {
              display: none;
