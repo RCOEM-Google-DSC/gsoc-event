@@ -21,7 +21,7 @@
  section {
      min-height: 100vh;
      padding: 4px;
-     padding-top: 10px;
+     padding-top: 80px;
  }
 
  #home {
@@ -78,7 +78,7 @@
          padding: 14px 32px;
          cursor: pointer;
          border: none;
-         background-color: lightseagreen;
+         background-color: #0f9d58;
          border-radius: 4px;
          font-size: large;
          color: white;
@@ -99,7 +99,7 @@
  #speaker {
      h1 {
          padding-left: 20px;
-         color: gray;
+         color: tomato;
          font-size: 50px;
 
          @include mobile {
@@ -131,10 +131,14 @@
  }
 
  #speaker {
+     h1 {
+         color: #0f9d58;
+     }
+
      .sec {
          display: flex;
          flex-direction: row;
-         justify-content: space-around;
+         justify-content: space-evenly;
          align-items: center;
 
          img {
@@ -148,7 +152,7 @@
          }
 
          p {
-             width: 50%;
+             width: 70%;
 
              @include mobile {
                  margin-left: 2px;
@@ -169,6 +173,8 @@
  }
 
  #about {
+     text-align: justify;
+
      img {
          width: 35%;
          display: inline-block;

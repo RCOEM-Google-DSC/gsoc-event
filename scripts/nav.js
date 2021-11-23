@@ -25,18 +25,18 @@ var prev = window.pageYOffset;
 var now;
 
 //event listerner when scrolled
-window.onscroll = function () {
-    now = window.pageYOffset;
-    var btn = document.getElementsByTagName("nav")[0];
-    if (now > 70) {
-        if (now - prev < 0) {
-            btn.style.transform = "translateY(0)";
-        } else {
-            btn.style.transform = "translateY(-70px)";
-        }
-    }
-    prev = window.pageYOffset;
-};
+// window.onscroll = function () {
+//     now = window.pageYOffset;
+//     var btn = document.getElementsByTagName("nav")[0];
+//     if (now > 70) {
+//         if (now - prev < 0) {
+//             btn.style.transform = "translateY(0)";
+//         } else {
+//             btn.style.transform = "translateY(-70px)";
+//         }
+//     }
+//     prev = window.pageYOffset;
+// };
 
 function menuOpen() {
     anime();
