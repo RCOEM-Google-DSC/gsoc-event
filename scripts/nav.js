@@ -3,6 +3,14 @@ var isMenuOpen = false;
 
 // window onload function
 window.onload = function () {
+    let a = document.querySelectorAll(".nav-links a")
+    for (let i = 0; i < a.length; i++) {
+        a[i].addEventListener("click", () => {
+            if (window.innerWidth < 700) {
+                menuOpen();
+            }
+        })
+    }
     // menuOpen();
     // nav(num);
 };
