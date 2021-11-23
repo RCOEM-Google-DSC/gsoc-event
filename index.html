@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap" rel="stylesheet">
+
+    <meta property="og:title" content="Intro to GSoC | GDSC RCOEM">
+    <meta property="og:description"
+        content="A walk through Google Summer of Code. Date: 27th November, 2021 Time: 5pm IST">
+    <meta property="og:image" content="./images/gsoc-logo.png">
+    <meta property="og:url" content="google.com">
+
+    <!-- Main Link Tags  -->
+    <link href="./images/gsoc-logo.png" rel="icon" type="image/png" sizes="16x16">
+    <link href="./images/gsoc-logo.png" rel="icon" type="image/png" sizes="32x32">
+
+    <title>Intro to GSoC | GDSC RCOEM</title>
+
+    <link rel="stylesheet" href="./styles/main.min.css">
+    <script src="./scripts/nav.js" defer></script>
+</head>
+
+<body>
+    <nav>
+        <div class="burger" onclick="menuOpen()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <a href="#home">
+            <img src="./images/gdsc-logo.png" alt="gdsc logo">
+        </a>
+
+        <ul class="nav-links">
+            <a href="#about">
+                <li>About</li>
+            </a>
+            <a href="#speaker">
+                <li>Our Speaker</li>
+            </a>
+            <a href="https://forms.gle/w4unwZcfqYtHAcjXA" target="_blank">
+                <li>Register</li>
+            </a>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <div class="bg">
+            <svg id="wave" style="transform:rotate(180deg)" viewBox="0 0 1440 490" version="1.1"
+                xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+                        <stop stop-color="rgba(243, 106, 62, 1)" offset="0%"></stop>
+                        <stop stop-color="rgba(255, 179, 11, 1)" offset="100%"></stop>
+                    </linearGradient>
+                </defs>
+                <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)"
+                    d="M0,0L14.1,49C28.2,98,56,196,85,236.8C112.9,278,141,261,169,261.3C197.6,261,226,278,254,285.8C282.4,294,311,294,339,294C367.1,294,395,294,424,302.2C451.8,310,480,327,508,277.7C536.5,229,565,114,593,73.5C621.2,33,649,65,678,138.8C705.9,212,734,327,762,326.7C790.6,327,819,212,847,179.7C875.3,147,904,196,932,187.8C960,180,988,114,1016,98C1044.7,82,1073,114,1101,171.5C1129.4,229,1158,310,1186,302.2C1214.1,294,1242,196,1271,147C1298.8,98,1327,98,1355,147C1383.5,196,1412,294,1440,343C1468.2,392,1496,392,1525,359.3C1552.9,327,1581,261,1609,261.3C1637.6,261,1666,327,1694,326.7C1722.4,327,1751,261,1779,220.5C1807.1,180,1835,163,1864,147C1891.8,131,1920,114,1948,98C1976.5,82,2005,65,2019,57.2L2032.9,49L2032.9,490L2018.8,490C2004.7,490,1976,490,1948,490C1920,490,1892,490,1864,490C1835.3,490,1807,490,1779,490C1750.6,490,1722,490,1694,490C1665.9,490,1638,490,1609,490C1581.2,490,1553,490,1525,490C1496.5,490,1468,490,1440,490C1411.8,490,1384,490,1355,490C1327.1,490,1299,490,1271,490C1242.4,490,1214,490,1186,490C1157.6,490,1129,490,1101,490C1072.9,490,1045,490,1016,490C988.2,490,960,490,932,490C903.5,490,875,490,847,490C818.8,490,791,490,762,490C734.1,490,706,490,678,490C649.4,490,621,490,593,490C564.7,490,536,490,508,490C480,490,452,490,424,490C395.3,490,367,490,339,490C310.6,490,282,490,254,490C225.9,490,198,490,169,490C141.2,490,113,490,85,490C56.5,490,28,490,14,490L0,490Z">
+                </path>
+                <defs>
+                    <linearGradient id="sw-gradient-1" x1="0" x2="0" y1="1" y2="0">
+                        <stop stop-color="rgba(243, 106, 62, 1)" offset="0%"></stop>
+                        <stop stop-color="rgba(255, 179, 11, 1)" offset="100%"></stop>
+                    </linearGradient>
+                </defs>
+                <path style="transform:translate(0, 50px); opacity:0.9" fill="url(#sw-gradient-1)"
+                    d="M0,0L14.1,40.8C28.2,82,56,163,85,228.7C112.9,294,141,343,169,326.7C197.6,310,226,229,254,171.5C282.4,114,311,82,339,106.2C367.1,131,395,212,424,228.7C451.8,245,480,196,508,196C536.5,196,565,245,593,236.8C621.2,229,649,163,678,155.2C705.9,147,734,196,762,212.3C790.6,229,819,212,847,187.8C875.3,163,904,131,932,171.5C960,212,988,327,1016,351.2C1044.7,376,1073,310,1101,294C1129.4,278,1158,310,1186,277.7C1214.1,245,1242,147,1271,138.8C1298.8,131,1327,212,1355,212.3C1383.5,212,1412,131,1440,155.2C1468.2,180,1496,310,1525,334.8C1552.9,359,1581,278,1609,245C1637.6,212,1666,229,1694,204.2C1722.4,180,1751,114,1779,114.3C1807.1,114,1835,180,1864,228.7C1891.8,278,1920,310,1948,310.3C1976.5,310,2005,278,2019,261.3L2032.9,245L2032.9,490L2018.8,490C2004.7,490,1976,490,1948,490C1920,490,1892,490,1864,490C1835.3,490,1807,490,1779,490C1750.6,490,1722,490,1694,490C1665.9,490,1638,490,1609,490C1581.2,490,1553,490,1525,490C1496.5,490,1468,490,1440,490C1411.8,490,1384,490,1355,490C1327.1,490,1299,490,1271,490C1242.4,490,1214,490,1186,490C1157.6,490,1129,490,1101,490C1072.9,490,1045,490,1016,490C988.2,490,960,490,932,490C903.5,490,875,490,847,490C818.8,490,791,490,762,490C734.1,490,706,490,678,490C649.4,490,621,490,593,490C564.7,490,536,490,508,490C480,490,452,490,424,490C395.3,490,367,490,339,490C310.6,490,282,490,254,490C225.9,490,198,490,169,490C141.2,490,113,490,85,490C56.5,490,28,490,14,490L0,490Z">
+                </path>
+            </svg>
+        </div>
+        <h1 id="heading">Calling all developers & GSoC enthusiasts !</h1>
+        <div class="logo" id="gdoc-logo">
+            <img src="./images/gsoc-logo.png" alt="">
+        </div>
+        <a href="https://forms.gle/w4unwZcfqYtHAcjXA" target="_blank">
+            <button>Register now!</button>
+        </a>
+
+        <h3>You don't want to miss out on an enriching program</h3>
+        <h1>"A walk through Google Summer of Code"</h1>
+        <h3>Date: 27<sup>th</sup> November, 2021</h3>
+        <h3>Time: 5pm IST </h3>
+    </section>
+
+    <section id="about">
+        <h1># About the Event</h1>
+        <p>
+            GSoC is an annual global program, conducted by Google, with an aim to promote open-source development. This
+            session is aimed to make you all aware of GSoC
+            & motivate you to take part in the upcoming GSoC ‘22.
+            <br> <br>
+            <span># Goal of the program</span> <br>
+            The GSoC program has several goals:
+            <br>
+            - Inspire developers to begin participating in open source development. <br>
+            - Help open source projects identify and bring in new developers. <br>
+            - Get more open source code written and released for the benefit of all. <br>
+            - Give newer developers more exposure to real-world software development (for example, distributed
+            development and version control, software licensing issues, testing, and communication best practices).
+            <br><br>
+            <span># Key topics to be covered:</span><br>
+            - Speaker’s experience at GSoC’21
+            - Benefits of open source development
+            - Why should you take part in GSoC’22?
+            <br><br>
+            <span># A Brief History of Google Summer of Code</span> <br>
+
+            Google Summer of Code began in 2005 as a complex experiment with a simple goal: helping students find work
+            related to their academic pursuits during their school holidays. In GSoC’s first year, 40 projects and 400
+            students participated. By the conclusion of the 17th Google Summer of Code in 2021, over 18,000 students
+            have
+            been accepted into the program. Best of all, most of the organizations participating over the past 17 years
+            reported that the program helped them find new community members and active committers.
+            <br>
+            GSoC has grown immensely over the last 17 years and in the process helped students make the most of their
+            summer
+            by working on exciting open source projects.
+        </p>
+        <img src="./images/about.svg" alt="">
+    </section>
+    <section id="speaker">
+        <h1># About our speaker</h1>
+        <div class="sec">
+            <p>
+                <a href="https://www.linkedin.com/in/harshcasper/" target="_blank">Mr. Harsh Bardhan Mishra</a> is a
+                senior
+                year CSE student
+                and a full-time software developer.
+                He has been a contributor at MetaCall in GSoC’21
+                & Moja global in GSoD'21
+                <br><br>
+                - In the past, he has worked at <b>RedHat</b>, interned for MLH fellowship,
+                <b>GeeksForGeeks</b> and many other organizations. <br>
+                - Currently, he’s working with <b>Quansight Labs</b>
+                and is the Community Lead of Google DSC, <b>Sathyabama IST</b>.
+                <br> <br>
+            </p>
+            <img src="./images/speaker.png" alt="">
+        </div>
+    </section>
+</body>
+
+</html>

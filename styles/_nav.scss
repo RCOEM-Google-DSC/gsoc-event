@@ -1,0 +1,147 @@
+// variables
+$dark: #262626;
+$nav-color: #efefef;
+$text-color1: #262626;
+$text-color2: #000;
+$mobile: 770px;
+
+@mixin mobile {
+    @media (max-width : #{$mobile}) {
+        @content;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $dark;
+    user-select: none;
+    color: $text-color1;
+    overflow-x: hidden;
+}
+
+nav {
+    height: 70px;
+    width: 100%;
+    background-color: $nav-color;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    transition-duration: 300ms;
+    z-index: 5;
+
+    a {
+        text-decoration: none;
+        outline: none;
+        color: $text-color1;
+    }
+
+    img {
+        width: 190px;
+
+        @include mobile {
+            width: 170px;
+        }
+    }
+
+    @include mobile {
+        justify-content: start;
+    }
+}
+
+.burger {
+    background-color: transparent;
+    display: none;
+    height: 40px;
+    width: 60px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    transition-duration: 300ms;
+
+    @include mobile {
+        display: block;
+    }
+
+    span {
+        position: relative;
+        display: block;
+        height: 4px;
+        width: 40px;
+        margin: 6px;
+        background-color: $text-color1;
+        transition-duration: 300ms;
+    }
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 520px;
+
+    @include mobile {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        position: absolute;
+        background-color: $nav-color;
+        width: 100vw;
+        height: calc(100vh - 70px);
+        top: 70px;
+        transition: 300ms;
+        transform: translateX(-100%);
+        border-top: 3px solid $dark;
+    }
+
+    li {
+        list-style: none;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-size: large;
+        border-bottom: 3px solid transparent;
+        font-weight: bold;
+        cursor: pointer;
+        font-family: "Raleway", sans-serif;
+        border: 4px solid transparent;
+        padding: 20px;
+
+        @include mobile {
+            padding: 20px;
+        }
+    }
+
+    li:hover {
+        border-bottom-color: #0f9d58;
+    }
+}
+
+/*  added class for animation purpose  */
+
+.open {
+    transform: translateX(0);
+}
+
+.menuAnimate {
+    span:nth-child(1) {
+        transform-origin: 20px;
+        transform: translateY(10px) rotate(-45deg);
+    }
+
+    span:nth-child(2) {
+        transform-origin: 20px;
+        transform: rotate(45deg);
+    }
+
+    span:nth-child(3) {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+}
