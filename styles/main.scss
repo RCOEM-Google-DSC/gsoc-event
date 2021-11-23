@@ -21,7 +21,7 @@
  section {
      min-height: 100vh;
      padding: 4px;
-     padding-top: 80px;
+     padding-top: 10px;
  }
 
  #home {
@@ -29,6 +29,7 @@
      flex-direction: column;
      justify-content: space-around;
      align-items: center;
+     padding-top: 80px;
 
      .bg {
          position: absolute;
@@ -43,6 +44,10 @@
 
      #heading {
          color: #fff;
+
+         @include mobile {
+             color: black;
+         }
      }
 
      img {
