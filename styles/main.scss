@@ -170,6 +170,29 @@
      a {
          color: #4285F4;
      }
+
+     button {
+         font-family: 'Roboto', sans-serif;
+         outline: none;
+         text-decoration: none;
+         padding: 14px 32px;
+         cursor: pointer;
+         border: none;
+         background-color: #0f9d58;
+         border-radius: 4px;
+         font-size: large;
+         color: white;
+         margin-top: 10px;
+         margin-bottom: 80px;
+
+         @include mobile {
+             margin-bottom: 50px;
+         }
+
+         &:active {
+             transform: scale(.9);
+         }
+     }
  }
 
  #about {
