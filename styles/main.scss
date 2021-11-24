@@ -97,6 +97,30 @@
 
  #about,
  #speaker {
+     .container {
+         width: 100%;
+         display: flex;
+         flex-direction: row;
+         justify-content: space-evenly;
+         align-items: center;
+         padding: 10px;
+
+         .video {
+             width: 50%;
+             display: flex;
+             flex-direction: row;
+             justify-content: space-around;
+             align-items: center;
+             margin-bottom: 100px;
+         }
+
+         @include mobile {
+             flex-direction: column-reverse;
+             padding: 0;
+             padding-top: 10px;
+         }
+     }
+
      h1 {
          padding-left: 20px;
          color: tomato;
@@ -112,7 +136,7 @@
          margin-left: 40px;
          font-size: large;
          padding: 20px;
-         width: 60%;
+         width: 100%;
 
          @include mobile {
              margin-left: 2px;
@@ -144,6 +168,7 @@
          img {
              width: 25%;
              border-radius: 50%;
+             margin-top: -200px;
 
              @include mobile {
                  width: 70%;
@@ -152,7 +177,7 @@
          }
 
          p {
-             width: 70%;
+             width: 65%;
 
              @include mobile {
                  margin-left: 2px;
@@ -210,13 +235,4 @@
              display: none;
          }
      }
- }
-
- .video {
-     width: 100%;
-     display: flex;
-     flex-direction: row;
-     justify-content: space-around;
-     align-items: center;
-     margin-bottom: 100px;
  }
